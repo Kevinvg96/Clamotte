@@ -11,6 +11,7 @@
         }
         .spreadsheet-container {
             width: 100%;
+            heigth: 100%;
             max-width: 1200px; /* Adjust max-width as desired */
             margin: 0 auto; /* Center the container */
             overflow: hidden; /* Helps contain the iframe */
