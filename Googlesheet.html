@@ -3,22 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Information</title> <link rel="stylesheet" href="style.css"> 
-     <link rel="stylesheet" href="googlesheet.css">
+    <title>Live Information</title>
+    <link rel="stylesheet" href="style.css"> <style>
+        /* THESE STYLES ARE SPECIFIC TO THIS SPREADSHEET PAGE LAYOUT */
+        /* They ensure the iframe content fills the page below the menu */
+        html, body {
+            height: 100%; /* Make html and body take full available height */
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars on body if iframe fits perfectly */
+            /* General page font and background, can also be in style.css if preferred globally */
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; /* Stack .top-menu, then .page-content vertically */
+        }
+
+        /* .top-menu styles are primarily from style.css */
+        /* Ensure .top-menu does not shrink: */
+        .top-menu {
+            flex-shrink: 0;
+        }
+
+        .page-content {
+            flex-grow: 1; /* Allows this section to take up remaining vertical space */
+            display: flex;
+            flex-direction: column; /* Stack h1, then spreadsheet-container vertically */
+            padding: 10px; /* Some padding around the content area */
+            overflow: hidden; /* Prevent internal scroll if possible, iframe will scroll */
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px; /* Space between heading and spreadsheet */
+            text-align: center;
+            flex-shrink: 0; /* Prevent heading from shrinking or being pushed out */
+            font-size: 1.5em;
+        }
+
+        .spreadsheet-container {
+            flex-grow: 1; /* Key: makes container take all available vertical space in .page-content */
+            width: 100%;  /* Full width of its parent */
+            display: flex; /* To help iframe fill it */
+        }
+
+        .spreadsheet-container iframe {
+            width: 100%;  /* Iframe takes full width of its container */
+            height: 100%; /* Iframe takes full height of its container */
+            border: 1px solid #ccc; /* Optional: border around the iframe */
+            box-sizing: border-box; /* Border and padding included in width/height */
+        }
+    </style>
 </head>
 <body>
 
     <nav class="top-menu">
-        <a href="index.html">Clamotte</a>
-        <a href="CR 2025 - Werkblad per post - Vrijdag 30-05-2025 - Crowd Support.htm">Timesheet Posten</a>
-        <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSECi-Cx1hxpLK8oSrwX0PNMLT-WHWpl7g_0bdof9iWj-R41JPhsW_4BlstLoS54A/pubhtml?gid=693880406&single=true"> Google Sheets posten </a>
-    </nav>
+        <a href="index.html">Back to Map</a>
+        </nav>
 
-    
-        <h1>Posten schedule</h1> <div class="spreadsheet-container">
-            <p style="padding: 40px; color: #777;">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSECi-Cx1hxpLK8oSrwX0PNMLT-WHWpl7g_0bdof9iWj-R41JPhsW_4BlstLoS54A/pubhtml?gid=693880406&amp;single=true&amp;widget=true&amp;headers=false"></iframe>        </div>
-    
+    <div class="page-content">
+        <h1>Live Schedule / Information</h1> <div class="spreadsheet-container">
+            <p style="padding: 40px; color: #777; text-align:center;">
+                (Your embedded Google Spreadsheet will appear here. Ensure you've pasted the &lt;iframe&gt; code and removed its 'width' and 'height' attributes.)
+            </p>
+        </div>
+    </div>
 
 </body>
 </html>
