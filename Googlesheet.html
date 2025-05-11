@@ -6,57 +6,53 @@
     <title>Live Information</title>
     <link rel="stylesheet" href="style.css"> <style>
         /* THESE STYLES ARE SPECIFIC TO THIS SPREADSHEET PAGE LAYOUT */
-        /* They ensure the iframe content fills the page below the menu */
         html, body {
-            width: 100%;
-            height: 100%; /* Make html and body take full available height */
+            height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevent scrollbars on body if iframe fits perfectly */
-            /* General page font and background, can also be in style.css if preferred globally */
-            font-family: sans-serif;
-            background-color: #f4f4f4;
+            overflow: hidden; /* Prevents scrollbars on body if content fits perfectly */
+            font-family: sans-serif; /* Or inherit from a global style in style.css */
+            background-color: #f4f4f4; /* Or inherit from a global style in style.css */
         }
 
         body {
             display: flex;
-            flex-direction: column; /* Stack .top-menu, then .page-content vertically */
+            flex-direction: column; /* Stacks menu then page-content */
         }
 
-        /* .top-menu styles are primarily from style.css */
-        /* Ensure .top-menu does not shrink: */
+        /* .top-menu styles are expected from style.css */
         .top-menu {
-            flex-shrink: 0;
+            flex-shrink: 0; /* Prevents menu from shrinking */
         }
 
         .page-content {
-            flex-grow: 1; /* Allows this section to take up remaining vertical space */
+            flex-grow: 1; /* Takes remaining vertical space */
             display: flex;
-            flex-direction: column; /* Stack h1, then spreadsheet-container vertically */
-            padding: 10px; /* Some padding around the content area */
-            overflow: hidden; /* Prevent internal scroll if possible, iframe will scroll */
+            flex-direction: column; /* Stacks h1 then spreadsheet-container */
+            padding: 10px; /* Padding around the main content area */
+            overflow: hidden; /* Manages overflow within this block */
         }
 
         h1 {
             color: #333;
             margin-top: 0;
-            margin-bottom: 10px; /* Space between heading and spreadsheet */
+            margin-bottom: 10px;
             text-align: center;
-            flex-shrink: 0; /* Prevent heading from shrinking or being pushed out */
+            flex-shrink: 0; /* Prevents heading from shrinking */
             font-size: 1.5em;
         }
 
         .spreadsheet-container {
-            flex-grow: 1; /* Key: makes container take all available vertical space in .page-content */
-            width: 100%;  /* Full width of its parent */
-            display: flex; /* To help iframe fill it */
+            flex-grow: 1; /* Takes all available vertical space within .page-content */
+            width: 100%;  /* CRITICAL: Takes full width of .page-content */
+            display: flex; /* Helps child iframe fill it */
         }
 
         .spreadsheet-container iframe {
-            width: 100%;  /* Iframe takes full width of its container */
-            height: 100%; /* Iframe takes full height of its container */
-            border: 1px solid #ccc; /* Optional: border around the iframe */
-            box-sizing: border-box; /* Border and padding included in width/height */
+            width: 100%;  /* CRITICAL: Iframe takes full width of .spreadsheet-container */
+            height: 100%; /* Iframe takes full height of .spreadsheet-container */
+            border: 1px solid #ccc; /* Optional border */
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -67,9 +63,11 @@
         </nav>
 
     <div class="page-content">
-        <h1>Live Schedule / Information</h1> <div class="spreadsheet-container">
-            <p style="padding: 40px; color: #777; text-align:center;">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSECi-Cx1hxpLK8oSrwX0PNMLT-WHWpl7g_0bdof9iWj-R41JPhsW_4BlstLoS54A/pubhtml?gid=693880406&amp;single=true&amp;widget=true&amp;headers=false"></iframe>            </p>
+        <h1>Live Schedule / Information</h1>
+        <div class="spreadsheet-container">
+            <p style="text-align:center; padding:20px; color:#777;">
+                (Your Google Sheet embed will appear here. Ensure the iframe tag has no width/height attributes.)
+            </p>
         </div>
     </div>
 
