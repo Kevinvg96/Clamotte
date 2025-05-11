@@ -10,7 +10,7 @@
         .top-menu {
             background-color: #333; /* Dark background for the menu */
             overflow: hidden;
-            padding: 10px 0; /* Padding top/bottom */
+            padding: 20px 0; /* Padding top/bottom */
             text-align: center; /* Center the menu items */
             width: 100%;
         }
@@ -19,7 +19,7 @@
             color: white; /* White text for links */
             padding: 14px 20px; /* Padding for each link */
             text-decoration: none; /* Remove underline from links */
-            font-size: 1em; /* Adjust font size as needed */
+            font-size: 2em; /* Adjust font size as needed */
             margin: 0 5px; /* Space between links */
         }
 
