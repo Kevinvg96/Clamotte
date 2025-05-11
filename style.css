@@ -1,0 +1,59 @@
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Top Navigation Menu Styles */
+        .top-menu {
+            background-color: #333; /* Dark background for the menu */
+            overflow: hidden;
+            padding: 10px 0; /* Padding top/bottom */
+            text-align: center; /* Center the menu items */
+            width: 100%;
+        }
+
+        .top-menu a {
+            color: white; /* White text for links */
+            padding: 14px 20px; /* Padding for each link */
+            text-decoration: none; /* Remove underline from links */
+            font-size: 1em; /* Adjust font size as needed */
+            margin: 0 5px; /* Space between links */
+        }
+
+        .top-menu a:hover {
+            background-color: #575757; /* Slightly lighter background on hover */
+            border-radius: 4px; /* Optional: rounded corners on hover */
+        }
+
+        /* Page Content Styles */
+        .page-content {
+            padding-top: 20px; /* Add padding so content is not directly under menu */
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        .image-container {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+  
