@@ -15,7 +15,7 @@
         }
         .diagram-container {
             width: 100%;
-            height: calc(100vh - 50px); /* Subtract navbar height if needed */
+            height: calc(100vh - 50px); /* adjust for navbar height */
             background-color: #fff;
             overflow: hidden;
         }
@@ -25,16 +25,18 @@
             border: none;
         }
 
-        /* Make iframe auto-scale slightly larger on mobile */
+        /* Mobile-specific scaling */
         @media (max-width: 768px) {
             .diagram-container {
-                height: 100vh; /* Ensure full height */
+                height: calc(100vh - 50px);
+                overflow-x: auto; /* Allow horizontal scrolling if needed */
+                -webkit-overflow-scrolling: touch;
             }
             iframe {
-                transform: scale(1.2); /* Increase size by 20% */
+                transform: scale(1.5); /* Scale up the content */
                 transform-origin: top left;
-                width: calc(100% / 1.2); /* Adjust width to fit scaled content */
-                height: calc(100% / 1.2); /* Adjust height to fit scaled content */
+                width: calc(100% / 1.5); /* Adjust width to match scale */
+                height: calc(100% / 1.5); /* Adjust height to match scale */
             }
         }
     </style>
