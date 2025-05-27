@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Draw.io Diagram</title>
+    <title>Responsive Draw.io with Tabs</title>
     <style>
         .diagram-container {
             position: relative;
@@ -13,7 +13,7 @@
         }
         .diagram-iframe {
             width: 100%;
-            height: 793px; /* or adjust height as needed */
+            height: 793px; /* Adjust for standard view */
             border: none;
             transform-origin: top left;
         }
@@ -21,18 +21,9 @@
         /* Mobile-specific scaling */
         @media (max-width: 600px) {
             .diagram-iframe {
-                transform: scale(1.5); /* 1.5x zoom on mobile */
-                height: calc(793px / 1.5); /* adjust height to keep proportion */
+                transform: scale(1.5); /* Zoom in on mobile */
+                height: calc(793px / 1.5); /* Adjust height proportionally */
             }
-        }
-
-        /* Optional: overlay to disable interaction */
-        .overlay {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10;
         }
     </style>
 </head>
@@ -40,11 +31,9 @@
     <div class="diagram-container">
         <iframe 
             class="diagram-iframe"
-            src="https://viewer.diagrams.net/?tags=%7B%7D&layers=0&nav=0&toolbar=0&zoom=0&title=Crew%20schedule%20vrijdag%20220525.drawio&transparent=1&dark=0#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1GezkZvP-NBLK8OdfCSMeMuOSkYH4hlOJ%26export%3Ddownload"
+            src="https://viewer.diagrams.net/?tags=%7B%7D&layers=1&nav=1&toolbar=0&zoom=0&title=Crew%20schedule%20vrijdag%20220525.drawio&transparent=1&dark=0#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1GezkZvP-NBLK8OdfCSMeMuOSkYH4hlOJ%26export%3Ddownload"
             allowtransparency="true">
         </iframe>
-        <!-- Optional overlay to disable interaction -->
-        <div class="overlay"></div>
     </div>
 </body>
 </html>
