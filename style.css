@@ -56,17 +56,17 @@ img {
     box-sizing: border-box;
 }
 
-/* 📱 Responsive Styles for Mobile */
+/* Style for MobilePhone */
 @media screen and (max-width: 600px) {
     .top-menu {
         display: flex;
-        flex-direction: column; /* Stack links vertically */
-        align-items: center;     /* Center the stacked links */
+        flex-direction: column; 
+        align-items: center;     
     }
 
     .top-menu a {
-        margin: 10px 0;          /* Vertical spacing between links */
-        font-size: 1.5em;        /* Optional: slightly smaller font on mobile */
-        padding: 10px 0;         /* Optional: adjust padding */
+        margin: 10px 0;          
+        font-size: 1.5em;        
+        padding: 5px 0;         
     }
 }
