@@ -66,6 +66,7 @@ img {
 .diagram-container {
     flex: 1;
     background-color: #fff;
+    display: block;
     overflow-x: auto; /* Allow horizontal scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     justify-conent: center;
