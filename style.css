@@ -6,25 +6,31 @@ body {
 }
 
 /* Top Navigation Menu Styles */
-.top-menu {
-    background-color: #333;
-    overflow: hidden;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-}
+ .top-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px; 
+    }
 
-.top-menu a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 2em;
-    margin: 0 2px;
-}
+    .top-menu a {
+        display: block;
+        background-color: #2D7A2D;  
+        color: white;
+        padding: 12px 20px;
+        margin: 5px 0;
+        font-size: 1.5em;
+        text-decoration: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Slightly stronger shadow */
+        transition: background-color 0.3s, transform 0.1s;
+        border: 2px solid black;  
+    }
 
-.top-menu a:hover {
-    background-color: #575757;
-    border-radius: 4px;
+    .top-menu a:hover, .top-menu a:active {
+        background-color: #23611F;  
+        transform: translateY(-2px);
+    }
 }
 /* Page Content Styles */
 .page-content {
@@ -53,34 +59,5 @@ img {
     margin-right: auto;
     border: 1px solid #ddd;
     box-sizing: border-box;
-}
-
-/* Style for MobilePhone */
-@media screen and (max-width: 600px) {
-    .top-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px; /* Spacing between buttons */
-    }
-
-    .top-menu a {
-        display: block;
-        background-color: #2D7A2D;  /* Clamotte green */
-        color: white;
-        padding: 12px 20px;
-        margin: 5px 0;
-        font-size: 1.5em;
-        text-decoration: none;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Slightly stronger shadow */
-        transition: background-color 0.3s, transform 0.1s;
-        border: 2px solid black;  /* Add a bold black border */
-    }
-
-    .top-menu a:hover, .top-menu a:active {
-        background-color: #23611F;  /* Darker green on hover */
-        transform: translateY(-2px);
-    }
 }
 
