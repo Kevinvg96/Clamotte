@@ -68,12 +68,14 @@ img {
     background-color: #fff;
     overflow-x: auto; /* Allow horizontal scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    justify-conent: center;
+    align-items: center; 
+    padding: 0 10px; 
 }
 
 iframe {
     width: 100%;
     height: 50vh;
-    border: none;
-    padding-left: 10px; 
+    border: none; 
 }
 
