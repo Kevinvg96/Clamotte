@@ -9,13 +9,15 @@ body {
  .top-menu {
         display: flex;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 5px; 
     }
 
     .top-menu a {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #2D7A2D;  
         color: white;
         padding: 12px 20px;
