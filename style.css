@@ -1,59 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            background-color: #f4f4f4;
-        }
+/* Top Navigation Menu Styles */
+.top-menu {
+    background-color: #333;
+    overflow: hidden;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
 
-        /* Top Navigation Menu Styles */
-        .top-menu {
-            background-color: #333; /* Dark background for the menu */
-            overflow: hidden;
-            padding: 20px 0; /* Padding top/bottom */
-            text-align: center; /* Center the menu items */
-            width: 100%;
-        }
+.top-menu a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 0 5px;
+}
 
-        .top-menu a {
-            color: white; /* White text for links */
-            padding: 14px 20px; /* Padding for each link */
-            text-decoration: none; /* Remove underline from links */
-            font-size: 2em; /* Adjust font size as needed */
-            margin: 0 5px; /* Space between links */
-        }
+.top-menu a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
 
-        .top-menu a:hover {
-            background-color: #575757; /* Slightly lighter background on hover */
-            border-radius: 4px; /* Optional: rounded corners on hover */
-        }
+/* Page Content Styles */
+.page-content {
+    padding-top: 20px;
+}
 
-        /* Page Content Styles */
-        .page-content {
-            padding-top: 20px; /* Add padding so content is not directly under menu */
-        }
+h1 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
 
-        h1 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-            text-align: center;
-        }
+.image-container {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding-bottom: 10px;
+}
 
-        .image-container {
-            width: 100%;
-            max-width: 100%;
-            text-align: center;
-            padding-bottom: 10px;
-        }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            border: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-  
+/* 📱 Responsive Styles for Mobile */
+@media screen and (max-width: 600px) {
+    .top-menu {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;     /* Center the stacked links */
+    }
+
+    .top-menu a {
+        margin: 10px 0;          /* Vertical spacing between links */
+        font-size: 1.5em;        /* Optional: slightly smaller font on mobile */
+        padding: 10px 0;         /* Optional: adjust padding */
+    }
+}
