@@ -7,6 +7,14 @@ body {
 }
 
 /* Top Navigation Menu Styles */
+/* Top Navigation Menu Styles */
+ .top-menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px; 
+    }
 .top-menu {
     background-color: #2D7A2D;
     color: white;
@@ -14,12 +22,32 @@ body {
     text-align: center;
 }
 
+    .top-menu a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2D7A2D;  
+        color: white;
+        padding: 12px 20px;
+        margin: 5px 0;
+        font-size: 1.5em;
+        text-decoration: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  
+        transition: background-color 0.3s, transform 0.1s;
+        border: 2px solid black;  
+    }
 .top-menu a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
 }
 
+    .top-menu a:hover, .top-menu a:active {
+        background-color: #23611F;  
+        transform: translateY(-2px);
+    }
+}
 }
 /* Page Content Styles */
 .page-content {
