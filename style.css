@@ -7,7 +7,7 @@ body {
 }
 
 /* Top Navigation Menu Styles */
-/* Top Navigation Menu Styles */
+
  .top-menu {
         display: flex;
         justify-content: center;
@@ -16,7 +16,7 @@ body {
         gap: 5px; 
     }
 .top-menu {
-    background-color: #2D7A2D;
+    background-color:white;
     color: white;
     padding: 10px;
     text-align: center;
