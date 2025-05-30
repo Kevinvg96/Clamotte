@@ -6,7 +6,7 @@ body {
     background-color: white;
 }
 
-/* Top Navigation Menu Styles */
+/* Menu Style */
 
  .top-menu {
         display: flex;
@@ -49,7 +49,7 @@ body {
     }
 }
 }
-/* Page Content Styles */
+/* Page Content Style */
 .page-content {
     padding-top: 20px;
 }
@@ -64,6 +64,7 @@ h1 {
 .image-container {
     width: 100%;
     max-width: 100%;
+    height: 70vh;
     text-align: center;
     padding-bottom: 10px;
 }
@@ -84,8 +85,8 @@ img {
     flex: 1;
     background-color: #fff;
     display: block;
-    overflow-x: auto; /* Allow horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
     justify-conent: center;
     align-items: center; 
     padding: 0 10px; 
